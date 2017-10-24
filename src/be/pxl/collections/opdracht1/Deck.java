@@ -24,5 +24,12 @@ public class Deck {
 	public Card dealCard(){
 		return cardGame.pollLast();
 	}
+	
+	public String showDeck(){
+		String output = cardGame.stream()
+				 .map(s -> s.getColor().toString() + s.getValue().toString())
+				 .reduce("", (acc, el) -> acc + el);
+		return output;
+	}
 
 }
