@@ -16,4 +16,20 @@ public class Card {
 	public Value getValue() {
 		return value;
 	}
+
+	public int compareTo(Card c2) {
+		if(this.color.compareTo(c2.color) == 0){
+			if(this.value.compareTo(c2.value) < 0){
+				return -1;
+			} else{
+				return 1;
+			}
+		} else {
+			if (this.color.compareTo(c2.color) > 0){
+				return 1;
+			} else {
+				return -1;
+			}
+		}
+	}
 }
