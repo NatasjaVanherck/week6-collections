@@ -22,7 +22,7 @@ public class Hand {
 		 long aantal = cards.stream().filter(s -> (s.getColor().getOrder() == color.getOrder()))
 				 .count();
 		 
-		 if(aantal > 1){
+		 if(aantal >= 1){
 			 return true;
 		 } else {
 			 return false;
