@@ -19,17 +19,9 @@ public class Card {
 
 	public int compareTo(Card c2) {
 		if(this.color.compareTo(c2.color) == 0){
-			if(this.value.compareTo(c2.value) < 0){
-				return -1;
-			} else{
-				return 1;
-			}
+			return this.value.compareTo(c2.value);
 		} else {
-			if (this.color.compareTo(c2.color) > 0){
-				return 1;
-			} else {
-				return -1;
-			}
+			return this.color.compareTo(c2.color);
 		}
 	}
 }

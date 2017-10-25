@@ -82,6 +82,14 @@ public class CardTest {
 	}
 	
 	@Test
+    public void testSameCardsCompareToReturns0() {
+         Card card1 = new Card(Color.HARTEN, Value.VALUE_6);
+         Card card2 = new Card(Color.HARTEN, Value.VALUE_6);
+         
+         assertEquals(0, card1.compareTo(card2));
+    }
+	
+	@Test
 	public void handIsAlwaysSorted() {
 		Hand hand = new Hand();
 		
